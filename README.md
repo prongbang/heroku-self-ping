@@ -2,13 +2,13 @@
 
 ## Installation:
 
-```
+```go
 go get github.com/prongbang/heroku-self-ping
 ```
 
 ## Usage:
 
-```
+```go
 import selfping "github.com/prongbang/heroku-self-ping"
 
 selfping.HerokuSelfPing("https://google.com", selfping.Options{
