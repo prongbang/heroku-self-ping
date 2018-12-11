@@ -3,6 +3,7 @@ package selfping
 import (
 	"log"
 	"net/http"
+	"strconv"
 	"time"
 )
 
@@ -21,7 +22,7 @@ func HerokuSelfPing(url string, options Options) {
 	}
 
 	if options.Verbose {
-		log.Println("heroku-self-ping: Setting up heartbeat to " + url + " every " + string(options.Interval) + "ms.")
+		log.Println("heroku-self-ping: Setting up heartbeat to " + url + " every " + strconv.Itoa(options.Interval) + "ms.")
 	}
 
 	SetInterval(func() {
